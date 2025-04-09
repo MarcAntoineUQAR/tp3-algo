@@ -1,0 +1,15 @@
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\obj\Debug\net9.0\tp3-algo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\obj\Debug\net9.0\tp3-algo.AssemblyInfoInputs.cache
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\obj\Debug\net9.0\tp3-algo.AssemblyInfo.cs
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\obj\Debug\net9.0\tp3-algo.csproj.CoreCompileInputs.cache
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\obj\Debug\net9.0\tp3-algo.sourcelink.json
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\bin\Debug\net9.0\tp3-algo.exe
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\bin\Debug\net9.0\tp3-algo.deps.json
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\bin\Debug\net9.0\tp3-algo.runtimeconfig.json
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\bin\Debug\net9.0\tp3-algo.dll
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\bin\Debug\net9.0\tp3-algo.pdb
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\obj\Debug\net9.0\tp3-algo.dll
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\obj\Debug\net9.0\refint\tp3-algo.dll
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\obj\Debug\net9.0\tp3-algo.pdb
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\obj\Debug\net9.0\tp3-algo.genruntimeconfig.cache
+C:\Users\simon\OneDrive\Desktop\tpteleinfo\tp3-algo\obj\Debug\net9.0\ref\tp3-algo.dll
