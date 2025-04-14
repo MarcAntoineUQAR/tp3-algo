@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tp3-algo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+165aea3ab4afece3805225cecc888c1eb20ebed7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac52aa9bee9832c83c7f1f5f3d85db5e1205c7a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("tp3-algo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tp3-algo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,9 +3,16 @@ using System.Collections.Generic;
 
 public class Node
 {
+    //Identificateur
     public int Id;
+
+    //Référence à la node derrière
     public Node? Previous;
+
+    //Référence à la node en avant
     public Node? Next;
+
+    //Les données dans la node
     public int? Value;
 
     public Node(int id, int value)
@@ -25,6 +32,7 @@ public class DoubleLL
         Node currentNode = StartingNode;
         while (currentNode != null)
         {
+            //Si la node est celle qu'on veux trouver
             if (currentNode.Value == valueToFind)
             {
                 Console.WriteLine($"Node {valueToFind} trouvé dans {currentNode.Id}");
@@ -39,42 +47,38 @@ public class DoubleLL
     public void AddNode(int valueToAdd)
     {
         Node currentNode = StartingNode;
-        while (currentNode.Next != null)
+        while (currentNode != null)
         {
-            if (currentNode.Value != null)
-                currentNode = currentNode.Next;
-            else
+            //Si la node est libre
+            if (currentNode.Value == null)
             {
+                //On ajoute la valeur voulue dans la node
                 currentNode.Value = valueToAdd;
-                Console.WriteLine($"Valeur {valueToAdd} ajouté dans node {currentNode.Id}");
+                Console.WriteLine($"Valeur {valueToAdd} ajoutée dans node {currentNode.Id}");
                 return;
             }
-            Console.WriteLine("Aucune node libre");
-            return;
+            currentNode = currentNode.Next;
         }
+        Console.WriteLine("Aucune node libre");
     }
 
-    public void RemoveNode(int idToRemove)
+    public void FreeNode(int valueToRemove)
     {
         Node currentNode = StartingNode;
         while (currentNode != null)
         {
-            if (currentNode.Id == idToRemove)
+            //Si la node est celle qu'on veut supprimer
+            if (currentNode.Value == valueToRemove)
             {
-                if (currentNode.Value == null)
-                {
-                    Console.WriteLine($"Le node {idToRemove} est déjà libre.");
-                    return;
-                }
-
+                //On libère la node
                 currentNode.Value = null;
-                Console.WriteLine($"Le node {idToRemove} est maintenant libre.");
+                Console.WriteLine($"Le node avec la valeur {valueToRemove} est maintenant libre.");
                 return;
             }
             currentNode = currentNode.Next;
         }
 
-        Console.WriteLine($"Aucun node avec l'ID {idToRemove} trouvé.");
+        Console.WriteLine($"Aucun node avec la valeur {valueToRemove} trouvé.");
     }
 
     public void CompactNodes()
@@ -108,6 +112,7 @@ class Program
 {
     static void Main()
     {
+        //Init des nodes
         Random random = new Random();
         var list = new DoubleLL();
 
@@ -122,16 +127,20 @@ class Program
             current = newNode;
         }
 
+        //Configuration du menu et des choix
         string choix;
         do
         {
-            Console.WriteLine("\n--- MENU ---");
-            Console.WriteLine("1. Afficher tous les nodes");
-            Console.WriteLine("2. Trouver un node avec une valeur");
-            Console.WriteLine("3. Ajouter une valeur");
-            Console.WriteLine("4. Supprimer une valeur");
-            Console.WriteLine("5. Compacter la liste");
-            Console.WriteLine("6. Quitter");
+            Console.WriteLine("\n====================================");
+            Console.WriteLine("   MENU - LISTE DOUBLEMENT CHAÎNÉE    ");
+            Console.WriteLine("====================================");
+            Console.WriteLine(" 1. Afficher toutes les nodes");
+            Console.WriteLine(" 2. Trouver un node selon une valeur");
+            Console.WriteLine(" 3. Ajouter une valeur dans une node libre");
+            Console.WriteLine(" 4. Libérer une node selon une valeur");
+            Console.WriteLine(" 5. Compacter la liste");
+            Console.WriteLine(" 6. Quitter");
+            Console.WriteLine("====================================");
             Console.Write("Choix: ");
             choix = Console.ReadLine();
 
@@ -169,12 +178,10 @@ class Program
                     break;
 
                 case "4":
-                    Console.Write("Entrez un entier à supprimer: ");
+                    Console.Write("Entrez un entier à libérer: ");
                     if (int.TryParse(Console.ReadLine(), out int valeurSupp))
                     {
-                        var node = list.FindNode(valeurSupp);
-                        if (node != null)
-                            list.RemoveNode(node.Id);
+                        list.FreeNode(valeurSupp);
                     }
                     break;
 
@@ -192,6 +199,6 @@ class Program
                     break;
             }
 
-        } while (choix != "5");
+        } while (choix != "6");
     }
 }

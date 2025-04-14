@@ -2,16 +2,22 @@ SYSTÈME DE LISTES DOUBLEMENT CHAÎNÉES
 =========================================================
 
 AUTEUR(S) : Simon Drolet, Marc-Antoine Leblond
-DATE DE CRÉATION : 9 avril 2025
+DATE DE CRÉATION : 14 avril 2025
 
 DESCRIPTION :
 -------------
+Implémentation de liste doublement chaînée en C#, avec suppression paresseuse.
 
 FONCTIONS :
 -----------
+FindNode(int valueToFind) : Prend un entier en paramètre. Recherche la première node contenant cette valeur (non libre) et retourne son identificateur (Id). Si aucune node ne contient cette valeur, retourne null.
+AddNode(int valueToAdd) : Prend un entier en paramètre. Ajoute la valeur dans la première node libre trouvée dans la liste. Si aucune node libre n’est disponible, affiche un message d’erreur.
+FreeNode(int valueToRemove) : Prend un entier en paramètre. Recherche la première node contenant cette valeur, et la marque comme libre (Value = null). Si aucune node ne correspond, affiche un message approprié.
+CompactNodes() : Parcourt la liste chaînée et supprime tous les nodes marqués comme libres. La structure de la liste est mise à jour pour relier correctement les nodes restants.
 
-EXEMPLES DE COMMANDES D'ÉXÉCUTION :
+COMMANDES D'ÉXÉCUTION :
 -----------------------------------
+- dotnetrun
 
 RÉFÉRENCES :
 -------------
